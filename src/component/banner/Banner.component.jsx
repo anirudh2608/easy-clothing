@@ -8,7 +8,7 @@ import {
   BannerImage,
   BannerCaption,
   BannerDetailsContainer,
-  BannerSubCaption
+  BannerSubCaption,
 } from './banner.style';
 
 import Slide_Image_1 from "../../assets/slider_1.webp"
@@ -66,7 +66,7 @@ const Banner = () => {
 
   useEffect(() => {
     setScreenWidth(window.innerWidth)
-  }, [window.innerWidth])
+  }, [window.innerWidth,screenWidth])
 
 
   useEffect(() => {
@@ -84,11 +84,11 @@ const Banner = () => {
 
   return (
     <BannerContainer>
-       <BannerImage imgURL={slideImages[imageIndex].url} imgMob={slideImages[imageIndex].Mob_Url}/>
+      <BannerImage imgURL={slideImages[imageIndex].url} imgMob={slideImages[imageIndex].Mob_Url} />
 
       <BannerDetailsContainer>
-        <BannerCaption>{slideImages[imageIndex].caption}</BannerCaption>
-        <BannerSubCaption>{slideImages[imageIndex].sub_caption}</BannerSubCaption>
+          <BannerCaption>{slideImages[imageIndex].caption}</BannerCaption>
+          <BannerSubCaption>{slideImages[imageIndex].sub_caption}</BannerSubCaption>
         <Button onClick={() => navigateTo(slideImages[imageIndex].route_Url)} buttonType={BUTTON_TYPE_CLASSES.banner}>Shop Now</Button>
       </BannerDetailsContainer>
     </BannerContainer>

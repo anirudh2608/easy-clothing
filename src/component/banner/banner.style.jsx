@@ -10,9 +10,12 @@ export const BannerDetailsContainer = styled.div`
 position: absolute;
 display: flex;
 flex-direction: column;
-width: 50%;
+padding:5px;
 top: 25%;
 left: 40px;
+background: rgba(0,0,0,0.2);
+border-radius: 5px;
+
 
 @media screen and (max-width:800px) {
     left: 30px;
@@ -42,9 +45,11 @@ background-image: url(${props => props.imgURL});
 
 `
 
+
 export const BannerCaption = styled.span`
 font-size: 15px;
 font-weight: bold;
+color: white;
 
 @media screen and (max-width:800px) {
     font-size: 10px;
@@ -57,6 +62,7 @@ font-weight: bold;
 export const BannerSubCaption = styled.span`
 font-size: 45px;
 font-weight: bold;
+color: white;
 margin-bottom: 10px;
 
 @media screen and (max-width:800px) {
